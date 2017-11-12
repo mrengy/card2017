@@ -1,7 +1,55 @@
 $font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $primary-color: #333;
 
+@mixin v-align{
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform:translateY(-50%); /* IE */
+    -moz-transform:translateY(-50%); /* Firefox */
+    -webkit-transform:translateY(-50%); /* Safari and Chrome */
+    -o-transform:translateY(-50%);
+}
+
+html{
+  height: 100%;
+}
+
 body {
   font: 100% $font-stack;
   color: $primary-color;
+  margin: 2em;
+  overflow: auto;
+  height: 100%;
+}
+
+div.targetcontainer{
+  position: relative;
+  overflow: hidden;
+  height: 80%;
+}
+
+div.target{
+  position: absolute;
+}
+
+div.top{
+  top: 0%;
+  width: 100%;
+  text-align: center;
+}
+
+div.right{
+  right: 0%;
+  @include v-align;
+}
+
+div.bottom{
+  bottom: 0%;
+  width: 100%;
+  text-align: center;
+}
+
+div.left{
+  left: 0%;
+  @include v-align;
 }
