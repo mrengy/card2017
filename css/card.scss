@@ -84,3 +84,13 @@ body {
   width:70%;
   background-color: $color-active;
 }
+
+.completed-item{
+  margin-right: .2em;
+  display: inline-block;
+}
+
+.completed-item img{
+  max-width: 2em;
+  max-height: 2em;
+}
