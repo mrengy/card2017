@@ -4,25 +4,36 @@ html {
 body {
   font: 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
-  margin: 2em;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 1em;
   overflow: auto;
   height: 100%; }
 
-div.targetcontainer {
+#targetcontainer {
   position: relative;
   overflow: hidden;
   height: 80%; }
 
-div.target {
+.target {
   position: absolute; }
 
-div.top {
+.top img, .bottom img {
+  max-width: 25%; }
+
+.left img, .right img {
+  max-width: 50%; }
+
+.top {
   top: 0%;
   width: 100%;
   text-align: center; }
 
-div.right {
+.right {
   right: 0%;
+  width: 50%;
+  text-align: right;
   top: 50%;
   transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -33,13 +44,15 @@ div.right {
   /* Safari and Chrome */
   -o-transform: translateY(-50%); }
 
-div.bottom {
+.bottom {
   bottom: 0%;
   width: 100%;
   text-align: center; }
 
-div.left {
+.left {
   left: 0%;
+  width: 50%;
+  text-align: left;
   top: 50%;
   transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -49,5 +62,16 @@ div.left {
   -webkit-transform: translateY(-50%);
   /* Safari and Chrome */
   -o-transform: translateY(-50%); }
+
+#hud {
+  margin-top: 1em; }
+
+#progress {
+  margin-top: .2em;
+  background-color: #ccc; }
+
+#remaining {
+  width: 70%;
+  background-color: #4a5; }
 
 /*# sourceMappingURL=card.css.map */

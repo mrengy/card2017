@@ -1,5 +1,7 @@
 $font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$primary-color: #333;
+$color-primary: #333;
+$color-background: #ccc;
+$color-active: #4a5;
 
 @mixin v-align{
     top: 50%;
@@ -16,40 +18,69 @@ html{
 
 body {
   font: 100% $font-stack;
-  color: $primary-color;
-  margin: 2em;
+  color: $color-primary;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 1em;
   overflow: auto;
   height: 100%;
 }
 
-div.targetcontainer{
+#targetcontainer{
   position: relative;
   overflow: hidden;
   height: 80%;
 }
 
-div.target{
+.target{
   position: absolute;
 }
 
-div.top{
+.top img, .bottom img{
+  max-width: 25%;
+}
+
+.left img, .right img{
+  max-width: 50%;
+}
+
+.top{
   top: 0%;
   width: 100%;
   text-align: center;
 }
 
-div.right{
+.right{
   right: 0%;
+  width: 50%;
+  text-align: right;
   @include v-align;
 }
 
-div.bottom{
+.bottom{
   bottom: 0%;
   width: 100%;
   text-align: center;
 }
 
-div.left{
+.left{
   left: 0%;
+  width: 50%;
+  text-align: left;
   @include v-align;
+}
+
+#hud{
+  margin-top: 1em;
+}
+
+#progress{
+  margin-top: .2em;
+  background-color: $color-background;
+}
+
+#remaining{
+  width:70%;
+  background-color: $color-active;
 }
