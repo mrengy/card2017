@@ -17,10 +17,23 @@ body {
   height: 80%; }
 
 .target {
-  position: absolute; }
+  position: absolute;
+  font-size: 4rem;
+  font-size: 20vw; }
+
+.target a {
+  text-decoration: none;
+  color: #333; }
 
 .top img, .bottom img {
   max-width: 25%; }
+
+.top img, .top span {
+  vertical-align: top;
+  margin: 0; }
+
+.bottom img {
+  vertical-align: bottom; }
 
 .left img, .right img {
   max-width: 50%; }
