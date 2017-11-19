@@ -21,6 +21,10 @@ body {
   font-size: 4rem;
   font-size: 20vw; }
 
+/* max font size */
+@media screen and (min-width: 768px) {
+  .target {
+    font-size: 154px; } }
 .target a {
   text-decoration: none;
   color: #333; }
@@ -31,9 +35,10 @@ body {
 .top img, .top span {
   vertical-align: top; }
 
+/* nudge text up to be in the same place as an image, despite room on top of the letter in the font */
 .top span {
   display: block;
-  margin-top: -.3em; }
+  margin-top: -.23em; }
 
 .bottom img {
   vertical-align: bottom; }
