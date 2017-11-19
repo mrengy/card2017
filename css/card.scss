@@ -2,6 +2,7 @@ $font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $color-primary: #333;
 $color-background: #ccc;
 $color-active: #4a5;
+$large: 768px;
 
 @mixin v-align{
     top: 50%;
@@ -40,7 +41,7 @@ body {
 }
 
 /* max font size */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $large) {
   .target{
     font-size: 154px;
   }
@@ -65,10 +66,6 @@ body {
   margin-top: -.23em;
 }
 
-.bottom img{
-  vertical-align: bottom;
-}
-
 .left img, .right img{
   max-width: 50%;
 }
@@ -86,10 +83,17 @@ body {
   @include v-align;
 }
 
+.bottom img{
+  vertical-align: bottom;
+}
 .bottom{
   bottom: 0%;
   width: 100%;
   text-align: center;
+}
+
+.bottom img, .bottom span{
+  vertical-align: bottom;
 }
 
 .left{
@@ -98,6 +102,7 @@ body {
   text-align: left;
   @include v-align;
 }
+
 
 #hud{
   margin-top: 1em;

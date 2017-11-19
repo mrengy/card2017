@@ -40,9 +40,6 @@ body {
   display: block;
   margin-top: -.23em; }
 
-.bottom img {
-  vertical-align: bottom; }
-
 .left img, .right img {
   max-width: 50%; }
 
@@ -65,10 +62,16 @@ body {
   /* Safari and Chrome */
   -o-transform: translateY(-50%); }
 
+.bottom img {
+  vertical-align: bottom; }
+
 .bottom {
   bottom: 0%;
   width: 100%;
   text-align: center; }
+
+.bottom img, .bottom span {
+  vertical-align: bottom; }
 
 .left {
   left: 0%;
