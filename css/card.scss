@@ -51,7 +51,11 @@ body {
 .top img, .top span{
   vertical-align: top;
   margin: 0;
-  height: inherit;
+}
+
+.top span{
+  display: block;
+  margin-top: -.3em;
 }
 
 .bottom img{

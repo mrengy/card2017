@@ -30,8 +30,11 @@ body {
 
 .top img, .top span {
   vertical-align: top;
-  margin: 0;
-  height: inherit; }
+  margin: 0; }
+
+.top span {
+  display: block;
+  margin-top: -.3em; }
 
 .bottom img {
   vertical-align: bottom; }
