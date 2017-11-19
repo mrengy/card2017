@@ -88,7 +88,8 @@ body {
   -o-transform: translateY(-50%); }
 
 #hud {
-  margin-top: 1em; }
+  margin-top: 1em;
+  vertical-align: bottom; }
 
 #progress {
   margin-top: .2em;
@@ -98,11 +99,21 @@ body {
   width: 70%;
   background-color: #4a5; }
 
-.completed-item {
-  margin-right: .2em;
-  display: inline-block; }
+.item {
+  margin-right: .1em;
+  display: inline-block;
+  border-bottom: 1px #333 solid; }
 
-.completed-item img {
+.item.space {
+  border-bottom: none; }
+
+.item-letter {
+  visibility: hidden; }
+
+.completed .item-letter {
+  visibility: visible; }
+
+.item img {
   max-width: 2em;
   max-height: 2em; }
 

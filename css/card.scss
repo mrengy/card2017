@@ -106,6 +106,7 @@ body {
 
 #hud{
   margin-top: 1em;
+  vertical-align: bottom;
 }
 
 #progress{
@@ -118,12 +119,25 @@ body {
   background-color: $color-active;
 }
 
-.completed-item{
-  margin-right: .2em;
+.item{
+  margin-right: .1em;
   display: inline-block;
+  border-bottom: 1px $color-primary solid;
 }
 
-.completed-item img{
+.item.space{
+  border-bottom: none;
+}
+
+.item-letter{
+  visibility: hidden;
+}
+
+.completed .item-letter{
+  visibility: visible;
+}
+
+.item img{
   max-width: 2em;
   max-height: 2em;
 }
