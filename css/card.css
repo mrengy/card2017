@@ -29,8 +29,7 @@ body {
   max-width: 25%; }
 
 .top img, .top span {
-  vertical-align: top;
-  margin: 0; }
+  vertical-align: top; }
 
 .top span {
   display: block;
