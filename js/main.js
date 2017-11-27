@@ -30,6 +30,5 @@ $( document ).ready(function() {
     }
   }
   writeMessage();
-  console.log(messageHTML);
   $('.letter').on('click', revealLetter);
 });
