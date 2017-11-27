@@ -16,13 +16,15 @@ $( document ).ready(function() {
 
   function writeMessage(){
     for (var i=0, len=message.length; i<len; i++){
-      //messageHTML+= 'a';
-
-      if (message.charAt(i) == ' '){
+      if (message.charAt(i) === ' '){
         messageHTML += '<div class=\"item space\"><div class=\"item-letter\">&nbsp;<\/div><\/div>';
       }
       else {
-        messageHTML += '<div class=\"item\"><div class=\"item-letter\">'+messageHTML.charAt(i)+'<\/div><\/div>';
+        messageHTML += '<div class=\"item\"><div class=\"item-letter\">'+message.charAt(i)+'<\/div><\/div>';
+      }
+
+      if (i == (len - 1)){
+        $('#item-container').append(messageHTML);
       }
     }
   }
