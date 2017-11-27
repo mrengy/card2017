@@ -21,6 +21,7 @@ $( document ).ready(function() {
       }
       else {
         messageHTML += '<div class=\"item\"><div class=\"item-letter\">'+message.charAt(i)+'<\/div><\/div>';
+        //create objects here
       }
 
       if (i == (len - 1)){
