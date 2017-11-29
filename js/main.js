@@ -33,7 +33,7 @@ $( document ).ready(function() {
           objectsLength = 1;
         }
         //create objects for letters that don't yet exist
-        //iterate through objects that have been created
+        //iterate through objects that have been created to detect whether they've been created already
         for (var j=0, length=objectsLength; j<length; j++){
           //if array has an item
           if (objects[0]!= undefined){
@@ -58,6 +58,13 @@ $( document ).ready(function() {
       }
     }
   }
+  //add image objects
+  objects.push(new Object('image','kepler'));
+  objects.push(new Object('image','lightning'));
+  objects.push(new Object('image','tomato'));
+  objects.push(new Object('image','us'));
+
   writeMessage();
   $('.letter').on('click', revealLetter);
+  console.log(objects);
 });
