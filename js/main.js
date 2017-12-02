@@ -4,10 +4,18 @@ $( document ).ready(function() {
   var objects = new Array();
   var alreadyExists = false;
   var objectsLength;
+  var pauseLength = 2000;
 
   function revealLetter(){
     var thistxt = $(this).text();
     $('.item-letter:contains('+thistxt+')').parent().addClass('completed');
+  }
+
+  function animateOut(){
+    setTimeout(function(){
+      //add the class after waiting pauseLength
+      $('.target').addClass('out');
+    }, pauseLength);
   }
 
   //constructor for target objects
@@ -54,6 +62,7 @@ $( document ).ready(function() {
       }
 
       if (i == (len - 1)){
+        //output the HTML
         $('#item-container').append(messageHTML);
       }
     }
@@ -66,5 +75,11 @@ $( document ).ready(function() {
 
   writeMessage();
   $('.letter').on('click', revealLetter);
-  console.log(objects);
+
+  //start the animation out
+  $('.top').on('webkitAnimationEnd oanimationend msAnimationEnd animationend',function(e){
+    if(e.originalEvent.animationName==='inTop'){
+      animateOut();
+    }
+  });
 });
