@@ -11,11 +11,15 @@ $( document ).ready(function() {
     $('.item-letter:contains('+thistxt+')').parent().addClass('completed');
   }
 
+  //add the 'out' class to start the out animation after waiting pauseLength
   function animateOut(){
     setTimeout(function(){
-      //add the class after waiting pauseLength
       $('.target').addClass('out');
     }, pauseLength);
+  }
+
+  function clearTargets(){
+    $('#targetcontainer').empty();
   }
 
   //constructor for target objects
@@ -80,6 +84,9 @@ $( document ).ready(function() {
   $('.top').on('webkitAnimationEnd oanimationend msAnimationEnd animationend',function(e){
     if(e.originalEvent.animationName==='inTop'){
       animateOut();
+    }
+    else if(e.originalEvent.animationName==='outTop'){
+      clearTargets();
     }
   });
 });
