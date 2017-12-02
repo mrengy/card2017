@@ -121,15 +121,12 @@ body {
   text-align: center;
   @include animation(0s,$animation-time,ease-out,inTop);
 }
+@include mykeyframe(inTop){ from{margin-top: -100%;} to{margin-top: 0;} }
 
-@include mykeyframe(inTop) {
-  from{
-    margin-top: -100%;
-  }
-  to{
-    margin-top: 0;
-  }
+.top.out{
+  @include animation(0s,$animation-time,ease-in,outTop);
 }
+@include mykeyframe(outTop){ from{margin-top: 0;} to{margin-top: -100%;} }
 
 .right{
   right: 0%;
@@ -138,15 +135,12 @@ body {
   @include v-align;
   @include animation(0s,$animation-time,ease-out,inRight);
 }
+@include mykeyframe(inRight){ from{margin-right:-100%;} to{margin-right:0;} }
 
-@include mykeyframe(inRight){
-  from{
-    margin-right:-100%;
-  }
-  to{
-    margin-right:0;
-  }
+.right.out{
+  @include animation(0s,$animation-time,ease-in,outRight);
 }
+@include mykeyframe(outRight){ from{margin-right: 0;} to{margin-right: -100%;} }
 
 .bottom{
   bottom: 0%;
@@ -154,15 +148,12 @@ body {
   text-align: center;
   @include animation(0s,$animation-time,ease-out,inBottom);
 }
+@include mykeyframe(inBottom){ from{margin-bottom:-100%;} to{margin-bottom:0;} }
 
-@include mykeyframe(inBottom){
-  from{
-    margin-bottom:-100%;
-  }
-  to{
-    margin-bottom:0;
-  }
+.bottom.out{
+  @include animation(0s,$animation-time,ease-in,outBottom);
 }
+@include mykeyframe(outBottom){ from{margin-bottom: 0;} to{margin-bottom: -100%;} }
 
 .bottom img, .bottom span{
   vertical-align: bottom;
@@ -175,15 +166,12 @@ body {
   @include v-align;
   @include animation(0s,$animation-time,ease-out,inLeft);
 }
+@include mykeyframe(inLeft){ from{margin-left:-100%;} to{margin-left:0;} }
 
-@include mykeyframe(inLeft){
-  from{
-    margin-left:-100%;
-  }
-  to{
-    margin-left:0;
-  }
+.left.out{
+  @include animation(0s,$animation-time,ease-in,outLeft);
 }
+@include mykeyframe(outLeft){ from{margin-left: 0;} to{margin-left: -100%;} }
 
 #hud{
   margin-top: 1em;

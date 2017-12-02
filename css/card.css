@@ -92,6 +92,52 @@ body {
     margin-top: -100%; }
   to {
     margin-top: 0; } }
+.top.out {
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-name: outTop;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 1s;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-name: outTop;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0s;
+  -o-animation-duration: 1s;
+  -o-animation-timing-function: ease-in;
+  -o-animation-name: outTop;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-name: outTop;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
+
+@-webkit-keyframes outTop {
+  from {
+    margin-top: 0; }
+  to {
+    margin-top: -100%; } }
+@-moz-keyframes outTop {
+  from {
+    margin-top: 0; }
+  to {
+    margin-top: -100%; } }
+@-o-keyframes outTop {
+  from {
+    margin-top: 0; }
+  to {
+    margin-top: -100%; } }
+@keyframes outTop {
+  from {
+    margin-top: 0; }
+  to {
+    margin-top: -100%; } }
 .right {
   right: 0%;
   width: 50%;
@@ -150,6 +196,52 @@ body {
     margin-right: -100%; }
   to {
     margin-right: 0; } }
+.right.out {
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-name: outRight;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 1s;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-name: outRight;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0s;
+  -o-animation-duration: 1s;
+  -o-animation-timing-function: ease-in;
+  -o-animation-name: outRight;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-name: outRight;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
+
+@-webkit-keyframes outRight {
+  from {
+    margin-right: 0; }
+  to {
+    margin-right: -100%; } }
+@-moz-keyframes outRight {
+  from {
+    margin-right: 0; }
+  to {
+    margin-right: -100%; } }
+@-o-keyframes outRight {
+  from {
+    margin-right: 0; }
+  to {
+    margin-right: -100%; } }
+@keyframes outRight {
+  from {
+    margin-right: 0; }
+  to {
+    margin-right: -100%; } }
 .bottom {
   bottom: 0%;
   width: 100%;
@@ -199,6 +291,52 @@ body {
     margin-bottom: -100%; }
   to {
     margin-bottom: 0; } }
+.bottom.out {
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-name: outBottom;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 1s;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-name: outBottom;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0s;
+  -o-animation-duration: 1s;
+  -o-animation-timing-function: ease-in;
+  -o-animation-name: outBottom;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-name: outBottom;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
+
+@-webkit-keyframes outBottom {
+  from {
+    margin-bottom: 0; }
+  to {
+    margin-bottom: -100%; } }
+@-moz-keyframes outBottom {
+  from {
+    margin-bottom: 0; }
+  to {
+    margin-bottom: -100%; } }
+@-o-keyframes outBottom {
+  from {
+    margin-bottom: 0; }
+  to {
+    margin-bottom: -100%; } }
+@keyframes outBottom {
+  from {
+    margin-bottom: 0; }
+  to {
+    margin-bottom: -100%; } }
 .bottom img, .bottom span {
   vertical-align: bottom; }
 
@@ -260,6 +398,52 @@ body {
     margin-left: -100%; }
   to {
     margin-left: 0; } }
+.left.out {
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-name: outLeft;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 1s;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-name: outLeft;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0s;
+  -o-animation-duration: 1s;
+  -o-animation-timing-function: ease-in;
+  -o-animation-name: outLeft;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-name: outLeft;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
+
+@-webkit-keyframes outLeft {
+  from {
+    margin-left: 0; }
+  to {
+    margin-left: -100%; } }
+@-moz-keyframes outLeft {
+  from {
+    margin-left: 0; }
+  to {
+    margin-left: -100%; } }
+@-o-keyframes outLeft {
+  from {
+    margin-left: 0; }
+  to {
+    margin-left: -100%; } }
+@keyframes outLeft {
+  from {
+    margin-left: 0; }
+  to {
+    margin-left: -100%; } }
 #hud {
   margin-top: 1em;
   vertical-align: bottom; }
