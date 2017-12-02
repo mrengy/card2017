@@ -19,7 +19,20 @@ $( document ).ready(function() {
   }
 
   function clearTargets(){
-    $('#targetcontainer').empty();
+    $('.target').empty().removeClass('out');
+  }
+
+  function runCycle(){
+    $('.top').one('webkitAnimationEnd oanimationend msAnimationEnd animationend',function(e){
+      //start the animation out
+      if(e.originalEvent.animationName==='inTop'){
+        animateOut();
+      }
+      //clear the target elements
+      else if(e.originalEvent.animationName==='outTop'){
+        clearTargets();
+      }
+    });
   }
 
   //constructor for target objects
@@ -29,6 +42,7 @@ $( document ).ready(function() {
     this.completed = false;
   }
 
+  //create all necessary JS objects and write the message in blank letters on the heads-up-display
   function writeMessage(){
     //iterate through the letters in the message variable
     for (var i=0, len=message.length; i<len; i++){
@@ -80,13 +94,6 @@ $( document ).ready(function() {
   writeMessage();
   $('.letter').on('click', revealLetter);
 
-  //start the animation out
-  $('.top').on('webkitAnimationEnd oanimationend msAnimationEnd animationend',function(e){
-    if(e.originalEvent.animationName==='inTop'){
-      animateOut();
-    }
-    else if(e.originalEvent.animationName==='outTop'){
-      clearTargets();
-    }
-  });
+  runCycle();
+
 });
