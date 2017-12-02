@@ -46,8 +46,48 @@ body {
 .top {
   top: 0%;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: inFromTop;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 1s;
+  -moz-animation-name: inFromTop;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0s;
+  -o-animation-duration: 1s;
+  -o-animation-name: inFromTop;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-name: inFromTop;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
 
+@-webkit-keyframes $animation_name {
+  from {
+    margin-top: -100%; }
+  to {
+    margin-top: 0; } }
+@-moz-keyframes $animation_name {
+  from {
+    margin-top: -100%; }
+  to {
+    margin-top: 0; } }
+@-o-keyframes $animation_name {
+  from {
+    margin-top: -100%; }
+  to {
+    margin-top: 0; } }
+@keyframes $animation_name {
+  from {
+    margin-top: -100%; }
+  to {
+    margin-top: 0; } }
 .right {
   right: 0%;
   width: 50%;
