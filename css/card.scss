@@ -3,6 +3,7 @@ $color-primary: #333;
 $color-background: #ccc;
 $color-active: #4a5;
 $large: 768px;
+$animation-time: 1s;
 
 @mixin v-align{
     top: 50%;
@@ -13,42 +14,46 @@ $large: 768px;
     -o-transform:translateY(-50%);
 }
 
-@mixin animation ($delay, $duration, $animation) {
+@mixin animation ($delay, $duration, $timing, $animation) {
     -webkit-animation-delay: $delay;
     -webkit-animation-duration: $duration;
+    -webkit-animation-timing-function: $timing;
     -webkit-animation-name: $animation;
     -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
 
     -moz-animation-delay: $delay;
     -moz-animation-duration: $duration;
+    -moz-animation-timing-function: $timing;
     -moz-animation-name: $animation;
     -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
 
     -o-animation-delay: $delay;
     -o-animation-duration: $duration;
+    -o-animation-timing-function: $timing;
     -o-animation-name: $animation;
     -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
 
     animation-delay: $delay;
     animation-duration: $duration;
+    animation-timing-function: $timing;
     animation-name: $animation;
     animation-fill-mode: forwards; /* this prevents the animation from restarting! */
 }
 
-@mixin keyframe ($animation_name) {
-    @-webkit-keyframes $animation_name {
+@mixin mykeyframe ($animation_name) {
+    @-webkit-keyframes #{$animation_name} {
         @content;
     }
 
-    @-moz-keyframes $animation_name {
+    @-moz-keyframes #{$animation_name} {
         @content;
     }
 
-    @-o-keyframes $animation_name {
+    @-o-keyframes #{$animation_name} {
         @content;
     }
 
-    @keyframes $animation_name {
+    @keyframes #{$animation_name} {
         @content;
     }
 }
@@ -114,10 +119,10 @@ body {
   top: 0%;
   width: 100%;
   text-align: center;
-  @include animation(0s,1s,inFromTop);
+  @include animation(0s,$animation-time,ease-out,inTop);
 }
 
-@include keyframe(inFromTop) {
+@include mykeyframe(inTop) {
   from{
     margin-top: -100%;
   }
@@ -131,15 +136,32 @@ body {
   width: 50%;
   text-align: right;
   @include v-align;
+  @include animation(0s,$animation-time,ease-out,inRight);
 }
 
-.bottom img{
-  vertical-align: bottom;
+@include mykeyframe(inRight){
+  from{
+    margin-right:-100%;
+  }
+  to{
+    margin-right:0;
+  }
 }
+
 .bottom{
   bottom: 0%;
   width: 100%;
   text-align: center;
+  @include animation(0s,$animation-time,ease-out,inBottom);
+}
+
+@include mykeyframe(inBottom){
+  from{
+    margin-bottom:-100%;
+  }
+  to{
+    margin-bottom:0;
+  }
 }
 
 .bottom img, .bottom span{
@@ -151,8 +173,17 @@ body {
   width: 50%;
   text-align: left;
   @include v-align;
+  @include animation(0s,$animation-time,ease-out,inLeft);
 }
 
+@include mykeyframe(inLeft){
+  from{
+    margin-left:-100%;
+  }
+  to{
+    margin-left:0;
+  }
+}
 
 #hud{
   margin-top: 1em;

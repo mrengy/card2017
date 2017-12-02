@@ -49,41 +49,45 @@ body {
   text-align: center;
   -webkit-animation-delay: 0s;
   -webkit-animation-duration: 1s;
-  -webkit-animation-name: inFromTop;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-name: inTop;
   -webkit-animation-fill-mode: forwards;
   /* this prevents the animation from restarting! */
   -moz-animation-delay: 0s;
   -moz-animation-duration: 1s;
-  -moz-animation-name: inFromTop;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-name: inTop;
   -moz-animation-fill-mode: forwards;
   /* this prevents the animation from restarting! */
   -o-animation-delay: 0s;
   -o-animation-duration: 1s;
-  -o-animation-name: inFromTop;
+  -o-animation-timing-function: ease-out;
+  -o-animation-name: inTop;
   -o-animation-fill-mode: forwards;
   /* this prevents the animation from restarting! */
   animation-delay: 0s;
   animation-duration: 1s;
-  animation-name: inFromTop;
+  animation-timing-function: ease-out;
+  animation-name: inTop;
   animation-fill-mode: forwards;
   /* this prevents the animation from restarting! */ }
 
-@-webkit-keyframes $animation_name {
+@-webkit-keyframes inTop {
   from {
     margin-top: -100%; }
   to {
     margin-top: 0; } }
-@-moz-keyframes $animation_name {
+@-moz-keyframes inTop {
   from {
     margin-top: -100%; }
   to {
     margin-top: 0; } }
-@-o-keyframes $animation_name {
+@-o-keyframes inTop {
   from {
     margin-top: -100%; }
   to {
     margin-top: 0; } }
-@keyframes $animation_name {
+@keyframes inTop {
   from {
     margin-top: -100%; }
   to {
@@ -100,16 +104,101 @@ body {
   /* Firefox */
   -webkit-transform: translateY(-50%);
   /* Safari and Chrome */
-  -o-transform: translateY(-50%); }
+  -o-transform: translateY(-50%);
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-name: inRight;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 1s;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-name: inRight;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0s;
+  -o-animation-duration: 1s;
+  -o-animation-timing-function: ease-out;
+  -o-animation-name: inRight;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-name: inRight;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
 
-.bottom img {
-  vertical-align: bottom; }
-
+@-webkit-keyframes inRight {
+  from {
+    margin-right: -100%; }
+  to {
+    margin-right: 0; } }
+@-moz-keyframes inRight {
+  from {
+    margin-right: -100%; }
+  to {
+    margin-right: 0; } }
+@-o-keyframes inRight {
+  from {
+    margin-right: -100%; }
+  to {
+    margin-right: 0; } }
+@keyframes inRight {
+  from {
+    margin-right: -100%; }
+  to {
+    margin-right: 0; } }
 .bottom {
   bottom: 0%;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-name: inBottom;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 1s;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-name: inBottom;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0s;
+  -o-animation-duration: 1s;
+  -o-animation-timing-function: ease-out;
+  -o-animation-name: inBottom;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-name: inBottom;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
 
+@-webkit-keyframes inBottom {
+  from {
+    margin-bottom: -100%; }
+  to {
+    margin-bottom: 0; } }
+@-moz-keyframes inBottom {
+  from {
+    margin-bottom: -100%; }
+  to {
+    margin-bottom: 0; } }
+@-o-keyframes inBottom {
+  from {
+    margin-bottom: -100%; }
+  to {
+    margin-bottom: 0; } }
+@keyframes inBottom {
+  from {
+    margin-bottom: -100%; }
+  to {
+    margin-bottom: 0; } }
 .bottom img, .bottom span {
   vertical-align: bottom; }
 
@@ -125,8 +214,52 @@ body {
   /* Firefox */
   -webkit-transform: translateY(-50%);
   /* Safari and Chrome */
-  -o-transform: translateY(-50%); }
+  -o-transform: translateY(-50%);
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-name: inLeft;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 1s;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-name: inLeft;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0s;
+  -o-animation-duration: 1s;
+  -o-animation-timing-function: ease-out;
+  -o-animation-name: inLeft;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-name: inLeft;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
 
+@-webkit-keyframes inLeft {
+  from {
+    margin-left: -100%; }
+  to {
+    margin-left: 0; } }
+@-moz-keyframes inLeft {
+  from {
+    margin-left: -100%; }
+  to {
+    margin-left: 0; } }
+@-o-keyframes inLeft {
+  from {
+    margin-left: -100%; }
+  to {
+    margin-left: 0; } }
+@keyframes inLeft {
+  from {
+    margin-left: -100%; }
+  to {
+    margin-left: 0; } }
 #hud {
   margin-top: 1em;
   vertical-align: bottom; }
