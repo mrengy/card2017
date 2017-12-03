@@ -5,6 +5,10 @@ $( document ).ready(function() {
   var alreadyExists = false;
   var objectsLength;
   var pauseLength = 2000;
+  var topItem = '';
+  var rightItem = '';
+  var bottomItem = '';
+  var leftItem = '';
 
   function revealLetter(){
     var thistxt = $(this).text();
@@ -22,29 +26,42 @@ $( document ).ready(function() {
     $('.target').empty().removeClass('out');
   }
 
+  function writeObject(name){
+    var nameOfItem = name+'Item';
+    //console.log(placeObjects[name+'Item']);
+    /*
+    console.log(nameOfItem);
+    console.log(placeObjects[name+'Item']);
+    console.log(placeObjects);
+    */
+    //console.log(eval(nameOfItem));
+
+  }
+
   function placeObjects(){
     var availableObjects = objects.slice(0);
 
     //top
-    var topItem = availableObjects[Math.floor(Math.random()*availableObjects.length)];
+    topItem = availableObjects[Math.floor(Math.random()*availableObjects.length)];
     //remove chosen item from availableObjects array
     availableObjects.splice( $.inArray(topItem, availableObjects), 1);
 
     //right
-    var rightItem = availableObjects[Math.floor(Math.random()*availableObjects.length)];
+    rightItem = availableObjects[Math.floor(Math.random()*availableObjects.length)];
     //remove chosen item from availableObjects array
     availableObjects.splice( $.inArray(rightItem, availableObjects), 1);
 
     //bottom
-    var bottomItem = availableObjects[Math.floor(Math.random()*availableObjects.length)];
+    bottomItem = availableObjects[Math.floor(Math.random()*availableObjects.length)];
     //remove top item from availableObjects array
     availableObjects.splice( $.inArray(bottomItem, availableObjects), 1);
 
     //left
-    var leftItem = availableObjects[Math.floor(Math.random()*availableObjects.length)];
+    leftItem = availableObjects[Math.floor(Math.random()*availableObjects.length)];
     //remove top item from availableObjects array
     availableObjects.splice( $.inArray(leftItem, availableObjects), 1);
 
+    writeObject('top');
   }
 
   function runCycle(){
