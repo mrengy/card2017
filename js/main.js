@@ -22,7 +22,35 @@ $( document ).ready(function() {
     $('.target').empty().removeClass('out');
   }
 
+  function placeObjects(){
+    var availableObjects = objects.slice(0);
+
+    //top
+    var topItem = availableObjects[Math.floor(Math.random()*availableObjects.length)];
+    //remove chosen item from availableObjects array
+    availableObjects.splice( $.inArray(topItem, availableObjects), 1);
+
+    //right
+    var rightItem = availableObjects[Math.floor(Math.random()*availableObjects.length)];
+    //remove chosen item from availableObjects array
+    availableObjects.splice( $.inArray(rightItem, availableObjects), 1);
+
+    //bottom
+    var bottomItem = availableObjects[Math.floor(Math.random()*availableObjects.length)];
+    //remove top item from availableObjects array
+    availableObjects.splice( $.inArray(bottomItem, availableObjects), 1);
+
+    //left
+    var leftItem = availableObjects[Math.floor(Math.random()*availableObjects.length)];
+    //remove top item from availableObjects array
+    availableObjects.splice( $.inArray(leftItem, availableObjects), 1);
+
+  }
+
   function runCycle(){
+    //place the objects in random position, and the CSS will animate them in
+    placeObjects();
+
     $('.top').one('webkitAnimationEnd oanimationend msAnimationEnd animationend',function(e){
       //start the animation out
       if(e.originalEvent.animationName==='inTop'){
@@ -96,4 +124,5 @@ $( document ).ready(function() {
 
   runCycle();
 
+  console.log(objects);
 });
