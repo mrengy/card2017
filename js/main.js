@@ -8,6 +8,7 @@ $( document ).ready(function() {
   var placeObject = new Array();
 
   function revealLetter(){
+    console.log('clicked');
     var thistxt = $(this).text();
     $('.item-letter:contains('+thistxt+')').parent().addClass('completed');
   }
@@ -148,7 +149,6 @@ $( document ).ready(function() {
   objects.push(new Object('image','us'));
 
   writeMessage();
-  $('.letter').on('click', revealLetter);
-
   runCycle();
+  $('.target').on('click', '.letter', revealLetter);
 });
