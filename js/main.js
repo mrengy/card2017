@@ -5,10 +5,7 @@ $( document ).ready(function() {
   var alreadyExists = false;
   var objectsLength;
   var pauseLength = 2000;
-  var topItem = '';
-  var rightItem = '';
-  var bottomItem = '';
-  var leftItem = '';
+  var placeObject = new Array();
 
   function revealLetter(){
     var thistxt = $(this).text();
@@ -27,7 +24,7 @@ $( document ).ready(function() {
   }
 
   function writeObject(name){
-    var nameOfItem = name+'Item';
+    //var nameOfItem = name+'Item';
     //console.log(placeObjects[name+'Item']);
     /*
     console.log(nameOfItem);
@@ -35,33 +32,43 @@ $( document ).ready(function() {
     console.log(placeObjects);
     */
     //console.log(eval(nameOfItem));
-
+    console.log(placeObject[name]);
   }
 
   function placeObjects(){
     var availableObjects = objects.slice(0);
 
-    //top
-    topItem = availableObjects[Math.floor(Math.random()*availableObjects.length)];
+    //top: determine random item to use
+    var topItem = availableObjects[Math.floor(Math.random()*availableObjects.length)];
     //remove chosen item from availableObjects array
     availableObjects.splice( $.inArray(topItem, availableObjects), 1);
 
-    //right
-    rightItem = availableObjects[Math.floor(Math.random()*availableObjects.length)];
+    //right: determine random item to use
+    var rightItem = availableObjects[Math.floor(Math.random()*availableObjects.length)];
     //remove chosen item from availableObjects array
     availableObjects.splice( $.inArray(rightItem, availableObjects), 1);
 
-    //bottom
-    bottomItem = availableObjects[Math.floor(Math.random()*availableObjects.length)];
-    //remove top item from availableObjects array
+    //bottom: determine random item to use
+    var bottomItem = availableObjects[Math.floor(Math.random()*availableObjects.length)];
+    //remove chosen item from availableObjects array
     availableObjects.splice( $.inArray(bottomItem, availableObjects), 1);
 
-    //left
-    leftItem = availableObjects[Math.floor(Math.random()*availableObjects.length)];
-    //remove top item from availableObjects array
+    //left: determine random item to use
+    var leftItem = availableObjects[Math.floor(Math.random()*availableObjects.length)];
+    //remove chosen item from availableObjects array
     availableObjects.splice( $.inArray(leftItem, availableObjects), 1);
 
+    // add all to placeObject array
+    placeObject = {
+      top:topItem,
+      right:rightItem,
+      bottom:bottomItem,
+      left:leftItem
+    }
     writeObject('top');
+    writeObject('right');
+    writeObject('bottom');
+    writeObject('left');
   }
 
   function runCycle(){
