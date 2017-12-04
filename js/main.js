@@ -23,16 +23,16 @@ $( document ).ready(function() {
     $('.target').empty().removeClass('out');
   }
 
+  //add an object to the DOM
   function writeObject(name){
-    //var nameOfItem = name+'Item';
-    //console.log(placeObjects[name+'Item']);
-    /*
-    console.log(nameOfItem);
-    console.log(placeObjects[name+'Item']);
-    console.log(placeObjects);
-    */
-    //console.log(eval(nameOfItem));
-    console.log(placeObject[name]);
+    if (placeObject[name]['type'] == 'image'){
+      $('.'+name).append( '<a href=\"#\"><img src=\"img\/'+placeObject[name]['name']+'.png\"><\/a>' );
+    }
+    else if (placeObject[name]['type'] == 'letter'){
+      $('.'+name).append( '<a href=\"#\"><span class=\"letter\">'+placeObject[name]['name']+'<\/span><\/a>' );
+    }
+    //remove the object from the array to make room for the next cycle
+    delete placeObject[name];
   }
 
   function placeObjects(){
