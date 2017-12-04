@@ -65,6 +65,7 @@ $( document ).ready(function() {
       bottom:bottomItem,
       left:leftItem
     }
+
     writeObject('top');
     writeObject('right');
     writeObject('bottom');
@@ -83,6 +84,9 @@ $( document ).ready(function() {
       //clear the target elements
       else if(e.originalEvent.animationName==='outTop'){
         clearTargets();
+
+        //repeat the cycle
+        runCycle();
       }
     });
   }
@@ -147,6 +151,4 @@ $( document ).ready(function() {
   $('.letter').on('click', revealLetter);
 
   runCycle();
-
-  console.log(objects);
 });
