@@ -11,6 +11,11 @@ body {
   overflow: auto;
   height: 100%; }
 
+#staticscreen {
+  position: relative;
+  overflow: hidden;
+  height: 100%; }
+
 #targetcontainer {
   position: relative;
   overflow: hidden;
