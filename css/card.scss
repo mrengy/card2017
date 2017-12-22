@@ -2,6 +2,7 @@ $font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $color-primary: #333;
 $color-background: #ccc;
 $color-active: #4a5;
+$color-speech-bubble: #fff;
 $large: 768px;
 $animation-time: 800ms;
 
@@ -58,6 +59,13 @@ $animation-time: 800ms;
     }
 }
 
+@mixin border-radius ($radius) {
+  border-radius: $radius;
+  -moz-border-radius: $radius; /* Firefox */
+  -webkit-border-radius: $radius; /* Safari and Chrome */
+  -o-border-radius: $radius;
+}
+
 html{
   height: 100%;
 }
@@ -65,26 +73,44 @@ html{
 body {
   font: 100% $font-stack;
   color: $color-primary;
+  background-color: $color-background;
   display: block;
   position: relative;
   box-sizing: border-box;
   padding: 1em;
   overflow: auto;
   height: 100%;
+  text-align: center;
 }
 
 #staticscreen{
   position:relative;
   overflow: hidden;
   height: 100%;
+  display: inline-block;
+  margin: 0 auto;
 }
 
+#staticscreen div{
+  text-align: left;
+  width: auto;
+}
 
+#go-button{
+  float: right;
+  margin-top: 1em;
+}
 
 #targetcontainer{
   position: relative;
   overflow: hidden;
   height: 80%;
+}
+
+#instructions{
+  background-color: $color-speech-bubble;
+  padding: .5em;
+  @include border-radius(.5em);
 }
 
 .target{
@@ -184,6 +210,7 @@ body {
 #hud{
   margin-top: 1em;
   vertical-align: bottom;
+  text-align: left;
 }
 
 #progress{

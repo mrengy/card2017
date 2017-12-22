@@ -4,22 +4,44 @@ html {
 body {
   font: 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
+  background-color: #ccc;
   display: block;
   position: relative;
   box-sizing: border-box;
   padding: 1em;
   overflow: auto;
-  height: 100%; }
+  height: 100%;
+  text-align: center; }
 
 #staticscreen {
   position: relative;
   overflow: hidden;
-  height: 100%; }
+  height: 100%;
+  display: inline-block;
+  margin: 0 auto; }
+
+#staticscreen div {
+  text-align: left;
+  width: auto; }
+
+#go-button {
+  float: right;
+  margin-top: 1em; }
 
 #targetcontainer {
   position: relative;
   overflow: hidden;
   height: 80%; }
+
+#instructions {
+  background-color: #fff;
+  padding: .5em;
+  border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  /* Firefox */
+  -webkit-border-radius: 0.5em;
+  /* Safari and Chrome */
+  -o-border-radius: 0.5em; }
 
 .target {
   position: absolute;
@@ -451,7 +473,8 @@ body {
     margin-left: -50%; } }
 #hud {
   margin-top: 1em;
-  vertical-align: bottom; }
+  vertical-align: bottom;
+  text-align: left; }
 
 #progress {
   margin-top: .2em;
