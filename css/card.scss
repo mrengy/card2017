@@ -86,9 +86,10 @@ body {
 #staticscreen{
   position:relative;
   overflow: hidden;
-  height: 100%;
+  height: auto;
   display: inline-block;
   margin: 0 auto;
+  @include v-align;
 }
 
 #staticscreen div{

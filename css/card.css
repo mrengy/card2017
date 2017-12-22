@@ -16,9 +16,18 @@ body {
 #staticscreen {
   position: relative;
   overflow: hidden;
-  height: 100%;
+  height: auto;
   display: inline-block;
-  margin: 0 auto; }
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  /* IE */
+  -moz-transform: translateY(-50%);
+  /* Firefox */
+  -webkit-transform: translateY(-50%);
+  /* Safari and Chrome */
+  -o-transform: translateY(-50%); }
 
 #staticscreen div {
   text-align: left;
