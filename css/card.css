@@ -18,16 +18,7 @@ body {
   overflow: hidden;
   height: auto;
   display: inline-block;
-  margin: 0 auto;
-  top: 50%;
-  transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  /* IE */
-  -moz-transform: translateY(-50%);
-  /* Firefox */
-  -webkit-transform: translateY(-50%);
-  /* Safari and Chrome */
-  -o-transform: translateY(-50%); }
+  margin: 2rem auto 0 auto; }
 
 #staticscreen div {
   text-align: left;
@@ -35,7 +26,7 @@ body {
 
 #go-button {
   float: right;
-  margin-top: 1em; }
+  margin-top: 2em; }
 
 #targetcontainer {
   position: relative;
@@ -44,13 +35,14 @@ body {
 
 #instructions {
   background-color: #fff;
-  padding: .5em;
-  border-radius: 0.5em;
-  -moz-border-radius: 0.5em;
+  padding: .5rem;
+  border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
   /* Firefox */
-  -webkit-border-radius: 0.5em;
+  -webkit-border-radius: 0.5rem;
   /* Safari and Chrome */ }
 
+/* speech bubble pointer */
 #instructions:after {
   content: '';
   position: relative;
@@ -63,6 +55,21 @@ body {
   margin-left: -15px;
   bottom: -1.3em;
   left: 20%; }
+
+.button {
+  background-color: #4a5;
+  padding: .5rem;
+  color: #fff;
+  border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  /* Firefox */
+  -webkit-border-radius: 0.5rem;
+  /* Safari and Chrome */
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.button:hover {
+  background-color: #283; }
 
 .target {
   position: absolute;
