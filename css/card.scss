@@ -354,3 +354,30 @@ div.centered{
   max-width: 2em;
   max-height: 2em;
 }
+
+.lightning{
+    position:absolute;
+    z-index:10;
+    width:216px;
+    height:120px;
+    top:0;
+    user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+.lightningLeft{
+	left:-216px;
+}
+
+.lightningRight{
+    right:-216px;
+    -moz-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+    display:none;
+}
