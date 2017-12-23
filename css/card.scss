@@ -88,6 +88,17 @@ body {
   padding:0;
 }
 
+.fullscreen div{
+  position: absolute;
+  z-index: 9;
+  top:1em;
+  height:100%;
+}
+
+.fullscreen img{
+  display:block;
+}
+
 #staticscreen{
   position:relative;
   overflow: hidden;
