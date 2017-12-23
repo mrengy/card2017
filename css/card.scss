@@ -84,12 +84,16 @@ body {
   text-align: center;
 }
 
+.fullscreen{
+  padding:0;
+}
+
 #staticscreen{
   position:relative;
   overflow: hidden;
   height: auto;
   display: inline-block;
-  margin: 2rem auto 0 auto;
+  margin: 0 auto 0 auto;
 }
 
 #staticscreen div{
