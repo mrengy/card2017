@@ -108,8 +108,10 @@ body {
   display:block;
 }
 
-#end{
+#end h1{
   color: $color-end-screen;
+  font-size: 2rem;
+  font-size: 7vw;
   text-align: center;
   text-shadow: 0px 0px 1rem rgba(0, 0, 0, 1);
 }
