@@ -19,20 +19,35 @@ body {
 .fullscreen div {
   position: absolute;
   z-index: 9;
-  top: 1em;
-  height: 100%; }
+  top: 1em; }
 
 .fullscreen img {
   display: block; }
 
-#staticscreen {
+#end {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 0px 1rem black; }
+
+div.centered {
+  left: 50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  /* IE */
+  -moz-transform: translateX(-50%);
+  /* Firefox */
+  -webkit-transform: translateX(-50%);
+  /* Safari and Chrome */
+  -o-transform: translateX(-50%); }
+
+.staticscreen {
   position: relative;
   overflow: hidden;
   height: auto;
   display: inline-block;
   margin: 0 auto 0 auto; }
 
-#staticscreen div {
+.staticscreen div {
   text-align: left;
   width: auto; }
 

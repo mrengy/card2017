@@ -5,6 +5,7 @@ $color-active: #4a5;
 $color-triggered: #283;
 $color-speech-bubble: #fff;
 $color-button-text: #fff;
+$color-end-screen: #fff;
 $large: 768px;
 $animation-time: 800ms;
 
@@ -15,6 +16,15 @@ $animation-time: 800ms;
     -moz-transform:translateY(-50%); /* Firefox */
     -webkit-transform:translateY(-50%); /* Safari and Chrome */
     -o-transform:translateY(-50%);
+}
+
+@mixin h-align{
+    left: 50%;
+    transform: translateX(-50%);
+    -ms-transform:translateX(-50%); /* IE */
+    -moz-transform:translateX(-50%); /* Firefox */
+    -webkit-transform:translateX(-50%); /* Safari and Chrome */
+    -o-transform:translateX(-50%);
 }
 
 @mixin animation ($delay, $duration, $timing, $animation) {
@@ -92,14 +102,23 @@ body {
   position: absolute;
   z-index: 9;
   top:1em;
-  height:100%;
 }
 
 .fullscreen img{
   display:block;
 }
 
-#staticscreen{
+#end{
+  color: $color-end-screen;
+  text-align: center;
+  text-shadow: 0px 0px 1rem rgba(0, 0, 0, 1);
+}
+
+div.centered{
+  @include h-align;
+}
+
+.staticscreen{
   position:relative;
   overflow: hidden;
   height: auto;
@@ -107,7 +126,7 @@ body {
   margin: 0 auto 0 auto;
 }
 
-#staticscreen div{
+.staticscreen div{
   text-align: left;
   width: auto;
 }
