@@ -14,18 +14,23 @@ body {
   text-align: center; }
 
 .fullscreen {
-  padding: 0; }
+  padding: 0;
+  overflow-x: hidden; }
 
 .fullscreen div {
   position: absolute;
-  z-index: 9;
-  top: 1em; }
+  z-index: 9; }
 
 .fullscreen img {
   display: block; }
 
+#end {
+  color: #fff; }
+
+.staticscreen a {
+  color: #fff; }
+
 #end h1 {
-  color: #fff;
   font-size: 2rem;
   font-size: 7vw;
   text-align: center;
@@ -52,6 +57,19 @@ div.centered {
 .staticscreen div {
   text-align: left;
   width: auto; }
+
+#end-message {
+  top: 1em; }
+
+#buttons {
+  right: 1rem;
+  bottom: .5rem;
+  z-index: 10; }
+
+#buttons a {
+  position: relative;
+  display: inline-block;
+  bottom: 0; }
 
 #go-button {
   float: right;
@@ -85,8 +103,16 @@ div.centered {
   bottom: -1.3em;
   left: 20%; }
 
+#kepler {
+  bottom: 0;
+  left: 1rem; }
+
+#kepler img {
+  width: 100px;
+  width: 20vw; }
+
 .button {
-  background-color: #4a5;
+  background-color: #283;
   padding: .5rem;
   color: #fff;
   border-radius: 0.5rem;
@@ -98,7 +124,14 @@ div.centered {
   text-transform: uppercase; }
 
 .button:hover {
-  background-color: #283; }
+  background-color: #4a5; }
+
+.secondary {
+  background-color: #666;
+  margin-right: .5rem; }
+
+.secondary:hover {
+  background-color: #888; }
 
 .target {
   position: absolute;
@@ -539,7 +572,7 @@ div.centered {
 
 #remaining {
   width: 70%;
-  background-color: #4a5; }
+  background-color: #283; }
 
 .item {
   margin-right: .1em;

@@ -1,8 +1,10 @@
 $font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $color-primary: #333;
+$color-secondary: #666;
+$color-secondary-triggered: #888;
 $color-background: #ccc;
-$color-active: #4a5;
-$color-triggered: #283;
+$color-active: #283;
+$color-triggered: #4a5;
 $color-speech-bubble: #fff;
 $color-button-text: #fff;
 $color-end-screen: #fff;
@@ -95,21 +97,28 @@ body {
 }
 
 .fullscreen{
-  padding:0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 .fullscreen div{
   position: absolute;
   z-index: 9;
-  top:1em;
 }
 
 .fullscreen img{
-  display:block;
+  display: block;
+}
+
+#end {
+  color: $color-end-screen;
+}
+
+.staticscreen a{
+  color: $color-end-screen;
 }
 
 #end h1{
-  color: $color-end-screen;
   font-size: 2rem;
   font-size: 7vw;
   text-align: center;
@@ -131,6 +140,22 @@ div.centered{
 .staticscreen div{
   text-align: left;
   width: auto;
+}
+
+#end-message{
+  top: 1em;
+}
+
+#buttons{
+  right: 1rem;
+  bottom: .5rem;
+  z-index: 10;
+}
+
+#buttons a{
+  position: relative;
+  display: inline-block;
+  bottom: 0;
 }
 
 #go-button{
@@ -165,6 +190,16 @@ div.centered{
   left: 20%;
 }
 
+#kepler{
+  bottom: 0;
+  left: 1rem;
+}
+
+#kepler img{
+  width: 100px;
+  width: 20vw;
+}
+
 .button{
   background-color: $color-active;
   padding: .5rem;
@@ -176,6 +211,15 @@ div.centered{
 
 .button:hover{
   background-color: $color-triggered;
+}
+
+.secondary{
+  background-color: $color-secondary;
+  margin-right: .5rem;
+}
+
+.secondary:hover{
+  background-color: $color-secondary-triggered;
 }
 
 .target{
