@@ -8,9 +8,13 @@ $( document ).ready(function() {
   var placeObject = new Array();
 
   function revealLetter(){
-    console.log('clicked');
     var thistxt = $(this).text();
     $('.item-letter:contains('+thistxt+')').parent().addClass('completed');
+    //subtract space characters to determine whether all non-space characters have been completed
+    if ( ($('.item').length - $('.space').length)== $('.completed').length ){
+      //redirect to end screen
+      $(location).attr('href', 'end.html');
+    }
   }
 
   //add the 'out' class to start the out animation after waiting pauseLength
