@@ -78,7 +78,7 @@ div.centered {
 #targetcontainer {
   position: relative;
   overflow: hidden;
-  height: 80%; }
+  height: 83%; }
 
 #instructions {
   background-color: #fff;
@@ -137,14 +137,45 @@ div.centered {
   font-size: .75rem;
   font-size: 4vw; }
 
-.target {
+.target, #feedback {
   position: absolute;
+  font-variant-numeric: slashed-zero;
   font-size: 4rem;
   font-size: 20vw; }
 
+#feedback {
+  color: #283;
+  text-align: center;
+  position: relative;
+  width: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  /* IE */
+  -moz-transform: translate(-50%, -50%);
+  /* Firefox */
+  -webkit-transform: translate(-50%, -50%);
+  /* Safari and Chrome */
+  -o-transform: translate(-50%, -50%); }
+
+#feedback div {
+  position: absolute;
+  width: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  /* IE */
+  -moz-transform: translate(-50%, -50%);
+  /* Firefox */
+  -webkit-transform: translate(-50%, -50%);
+  /* Safari and Chrome */
+  -o-transform: translate(-50%, -50%); }
+
 /* max font size */
 @media screen and (min-width: 768px) {
-  .target {
+  .target, #feedback {
     font-size: 154px; } }
 .target a {
   text-decoration: none;
