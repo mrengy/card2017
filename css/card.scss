@@ -10,6 +10,7 @@ $color-button-text: #fff;
 $color-end-screen: #fff;
 $large: 768px;
 $animation-time: 800ms;
+$feedback-time: 400ms;
 
 @mixin v-align{
     top: 50%;
@@ -246,8 +247,6 @@ div.centered{
 
 #feedback{
   color: $color-active;
-  text-align: center;
-  position: relative;
   width: auto;
   @include both-align;
 }
@@ -256,7 +255,16 @@ div.centered{
   position: absolute;
   width: auto;
   @include both-align;
+  opacity: 0;
 }
+
+/* show and quickly fade out the feedback on success or error */
+#feedback div.active{
+  opacity:1;
+  @include animation(0s,$feedback-time,ease-out,activeOut);
+}
+@include mykeyframe(activeOut){ from{opacity: 1;} to{opacity: 0;} }
+
 
 /* max font size */
 @media screen and (min-width: $large) {
