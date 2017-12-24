@@ -141,18 +141,17 @@ div.centered {
   font-size: 4rem;
   font-size: 20vw; }
 
+/*
+#feedback{
+  color: $color-active;
+  @include both-align;
+}
+*/
 #feedback {
   color: #283;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  /* IE */
-  -moz-transform: translate(-50%, -50%);
-  /* Firefox */
-  -webkit-transform: translate(-50%, -50%);
-  /* Safari and Chrome */
-  -o-transform: translate(-50%, -50%); }
+  width: 100%;
+  height: 100%;
+  pointer-events: none; }
 
 #feedback div {
   position: absolute;

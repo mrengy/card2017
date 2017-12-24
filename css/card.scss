@@ -244,9 +244,18 @@ div.centered{
   font-size: 20vw;
 }
 
+/*
 #feedback{
   color: $color-active;
   @include both-align;
+}
+*/
+
+#feedback{
+  color: $color-active;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 #feedback div{
