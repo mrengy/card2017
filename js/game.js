@@ -6,13 +6,37 @@ $( document ).ready(function() {
   var objectsLength;
   var pauseLength = 2000;
   var placeObject = new Array();
+  var messageLength = ($('.item').length - $('.space').length); //length of message, minus the spaces
 
   function revealLetter(){
     var thistxt = $(this).text();
-    $('.item-letter:contains('+thistxt+')').parent().addClass('completed');
-    //subtract space characters to determine whether all non-space characters have been completed
-    if ( ($('.item').length - $('.space').length)== $('.completed').length ){
-      //redirect to end screen
+
+    //feedback animation
+    //if the item doesn't have the completed class, i.e. it hasn't been clicked already
+    if(!$('.item-letter:contains('+thistxt+')').parent().hasClass('completed')){
+      $('#success').addClass('active');
+      $('#feedback div').on('webkitAnimationEnd oanimationend msAnimationEnd animationend',function(e){
+        //remove the class when animation is done
+        if(e.originalEvent.animationName==='activeOut'){
+          $(e.target).removeClass('active');
+        }
+      });
+      //show the letter clicked
+      $('.item-letter:contains('+thistxt+')').parent().addClass('completed');
+    } else {
+      //show the error animation since this item has been clicked already or is not in the messaage
+      $('#error').addClass('active');
+      $('#feedback div').on('webkitAnimationEnd oanimationend msAnimationEnd animationend',function(e){
+        //remove the class when animation is done
+        if(e.originalEvent.animationName==='activeOut'){
+          $(e.target).removeClass('active');
+        }
+      });
+    }
+
+    //when all characters in the message have been completed
+    if ( messageLength == $('.completed').length ){
+      //redirect to end screen once all letters have been clicked
       $(location).attr('href', 'end.html');
     }
   }

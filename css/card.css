@@ -175,25 +175,25 @@ div.centered {
 /* show and quickly fade out the feedback on success or error */
 #feedback div.active {
   opacity: 1;
-  -webkit-animation-delay: 0s;
+  -webkit-animation-delay: 200ms;
   -webkit-animation-duration: 400ms;
   -webkit-animation-timing-function: ease-out;
   -webkit-animation-name: activeOut;
   -webkit-animation-fill-mode: forwards;
   /* this prevents the animation from restarting! */
-  -moz-animation-delay: 0s;
+  -moz-animation-delay: 200ms;
   -moz-animation-duration: 400ms;
   -moz-animation-timing-function: ease-out;
   -moz-animation-name: activeOut;
   -moz-animation-fill-mode: forwards;
   /* this prevents the animation from restarting! */
-  -o-animation-delay: 0s;
+  -o-animation-delay: 200ms;
   -o-animation-duration: 400ms;
   -o-animation-timing-function: ease-out;
   -o-animation-name: activeOut;
   -o-animation-fill-mode: forwards;
   /* this prevents the animation from restarting! */
-  animation-delay: 0s;
+  animation-delay: 200ms;
   animation-duration: 400ms;
   animation-timing-function: ease-out;
   animation-name: activeOut;

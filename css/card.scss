@@ -10,7 +10,8 @@ $color-button-text: #fff;
 $color-end-screen: #fff;
 $large: 768px;
 $animation-time: 800ms;
-$feedback-time: 400ms;
+$feedback-pause: 200ms;
+$feedback-animation-time: 400ms;
 
 @mixin v-align{
     top: 50%;
@@ -261,7 +262,7 @@ div.centered{
 /* show and quickly fade out the feedback on success or error */
 #feedback div.active{
   opacity:1;
-  @include animation(0s,$feedback-time,ease-out,activeOut);
+  @include animation($feedback-pause,$feedback-animation-time,ease-out,activeOut);
 }
 @include mykeyframe(activeOut){ from{opacity: 1;} to{opacity: 0;} }
 
