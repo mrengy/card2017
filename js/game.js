@@ -12,12 +12,11 @@ $( document ).ready(function() {
   var lives = $('.life').length;
 
   function revealLetter(){
-    var thistxt = $(this).text();
-    var thisClass= $(this)[0].className;
-
+    var thisText = $(this)[0].children[0].outerText;
+    var thisClass= $(this)[0].children[0].className;
     //feedback animation
     //if the item is a letter and doesn't have the completed class, i.e. it hasn't been clicked already, show the success feedback
-    if( thisClass == 'letter' && !$('.item-letter:contains('+thistxt+')').parent().hasClass('completed') ){
+    if( thisClass == 'letter' && !$('.item-letter:contains('+thisText+')').parent().hasClass('completed') ){
       $('#success').addClass('active');
       soundSuccess.play();
       $('#feedback div').on('webkitAnimationEnd oanimationend msAnimationEnd animationend',function(e){
@@ -27,7 +26,7 @@ $( document ).ready(function() {
         }
       });
       //show the letter clicked
-      $('.item-letter:contains('+thistxt+')').parent().addClass('completed');
+      $('.item-letter:contains('+thisText+')').parent().addClass('completed');
 
       //wait for success sound to finish
       soundSuccess.addEventListener("ended", function(){
@@ -203,5 +202,5 @@ $( document ).ready(function() {
   writeMessage();
   messageLength = ($('.item').length - $('.space').length); //length of message, minus the spaces
   runCycle();
-  $('.target').on('click', '.letter, .image', revealLetter);
+  $('.target').on('click', 'a', revealLetter);
 });
