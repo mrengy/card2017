@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-  var message = "HAPPY HOLIDAYS";
+  var message = "WISHING YOU FUN AND GAMES IN 2018";
   var messageHTML = '';
   var objects = new Array();
   var alreadyExists = false;

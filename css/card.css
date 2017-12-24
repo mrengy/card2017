@@ -30,7 +30,7 @@ body {
 .staticscreen a {
   color: #fff; }
 
-#end h1 {
+.fullscreen h1 {
   font-size: 2rem;
   font-size: 7vw;
   text-align: center;
@@ -132,6 +132,10 @@ div.centered {
 
 .secondary:hover {
   background-color: #888; }
+
+.fullscreen .button {
+  font-size: .75rem;
+  font-size: 4vw; }
 
 .target {
   position: absolute;

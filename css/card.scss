@@ -118,7 +118,7 @@ body {
   color: $color-end-screen;
 }
 
-#end h1{
+.fullscreen h1{
   font-size: 2rem;
   font-size: 7vw;
   text-align: center;
@@ -220,6 +220,11 @@ div.centered{
 
 .secondary:hover{
   background-color: $color-secondary-triggered;
+}
+
+.fullscreen .button{
+  font-size: .75rem;
+  font-size: 4vw;
 }
 
 .target{
