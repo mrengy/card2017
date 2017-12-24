@@ -49,7 +49,6 @@ div.centered {
 
 .staticscreen {
   position: relative;
-  overflow: hidden;
   height: auto;
   display: inline-block;
   margin: 0 auto 0 auto; }
@@ -71,7 +70,7 @@ div.centered {
   display: inline-block;
   bottom: 0; }
 
-#go-button {
+#start-buttons {
   float: right;
   margin-top: 2em; }
 
@@ -134,8 +133,7 @@ div.centered {
   background-color: #888; }
 
 .fullscreen .button {
-  font-size: .75rem;
-  font-size: 4vw; }
+  font-size: .75rem; }
 
 .target, #feedback {
   position: absolute;
@@ -709,6 +707,12 @@ div.centered {
   -webkit-transform: scale(-1, 1);
   transform: scale(-1, 1);
   display: none; }
+
+.upsidedown {
+  -moz-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+  transform: scale(1, -1); }
 
 .em {
   font-style: italic; }

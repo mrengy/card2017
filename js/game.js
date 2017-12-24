@@ -9,6 +9,7 @@ $( document ).ready(function() {
   var messageLength;
   var soundSuccess = new Audio("sound/success.wav");
   var soundError = new Audio("sound/error.wav");
+  var lives = $('.life').length;
 
   function revealLetter(){
     var thistxt = $(this).text();
@@ -41,6 +42,18 @@ $( document ).ready(function() {
       //show the error feedback since this item has been clicked already or is not in the messaage
       $('#error').addClass('active');
       soundError.play();
+      //remove a life
+      $('.life:not(.lost):last').addClass('lost');
+
+      //wait for success sound to finish
+      soundError.addEventListener("ended", function(){
+        //when all lives have been lost
+        if ( lives == $('.lost').length ){
+          //redirect to game over screen once all letters have been clicked
+          $(location).attr('href', 'gameover.html');
+        }
+      });
+
       $('#feedback div').on('webkitAnimationEnd oanimationend msAnimationEnd animationend',function(e){
         //remove the class when animation is done
         if(e.originalEvent.animationName==='activeOut'){
