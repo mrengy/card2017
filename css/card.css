@@ -236,7 +236,8 @@ div.centered {
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
-  -ms-user-select: none; }
+  -ms-user-select: none;
+  opacity: 1; }
 
 .top img, .bottom img {
   max-width: 25%; }
