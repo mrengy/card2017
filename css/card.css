@@ -670,7 +670,8 @@ div.centered {
   content: "\00274C";
   position: absolute;
   z-index: 2;
-  top: 0; }
+  top: 0;
+  left: 0; }
 
 .item {
   margin-right: .1em;
