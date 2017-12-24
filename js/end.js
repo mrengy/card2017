@@ -42,7 +42,7 @@ $( document ).ready(function() {
 
         thisLightning.css("width", thisLightningWidth);
         thisLightning.css("height", thisLightningWidth / (w0/h0));
-        thisLightning.css("top", getRandomInt(0, windowHeight)*1.5);
+        thisLightning.css("top", getRandomInt(0, windowHeight));
         thisLightning.attr('id', 'lightning-'+lightningCounter);
 
         thisLightning.appendTo(lightning[0].parent());
@@ -77,7 +77,7 @@ $( document ).ready(function() {
 
     }
 
-    // run this function only once. Start the lightning moving and get rid of the functions to reposition the speech bubble
+    // run this function only once. Start the lightning moving
     $('#kepler a').one( 'click', function(){
         //$window.off('resize');
         $window.off('scroll');
@@ -87,6 +87,9 @@ $( document ).ready(function() {
 
         //track google analytics event
         ga('send', 'event', 'Kepler', 'click', 'Easter Eggs');
+
+        //remove link
+        $('#keplerImage').unwrap('a');
 
         //don't follow the link
         return false;
