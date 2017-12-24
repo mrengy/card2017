@@ -10,10 +10,11 @@ $( document ).ready(function() {
 
   function revealLetter(){
     var thistxt = $(this).text();
+    var thisClass= $(this)[0].className;
 
     //feedback animation
-    //if the item doesn't have the completed class, i.e. it hasn't been clicked already
-    if(!$('.item-letter:contains('+thistxt+')').parent().hasClass('completed')){
+    //if the item is a letter and doesn't have the completed class, i.e. it hasn't been clicked already, show the success animation
+    if( thisClass == 'letter' && !$('.item-letter:contains('+thistxt+')').parent().hasClass('completed') ){
       $('#success').addClass('active');
       $('#feedback div').on('webkitAnimationEnd oanimationend msAnimationEnd animationend',function(e){
         //remove the class when animation is done
@@ -57,7 +58,7 @@ $( document ).ready(function() {
   //add an object to the DOM
   function writeObject(name){
     if (placeObject[name]['type'] == 'image'){
-      $('.'+name).append( '<a href=\"#\"><img src=\"img\/'+placeObject[name]['name']+'.png\"><\/a>' );
+      $('.'+name).append( '<a href=\"#\"><img class=\"image\" src=\"img\/'+placeObject[name]['name']+'.png\"><\/a>' );
     }
     else if (placeObject[name]['type'] == 'letter'){
       $('.'+name).append( '<a href=\"#\"><span class=\"letter\">'+placeObject[name]['name']+'<\/span><\/a>' );
@@ -181,5 +182,5 @@ $( document ).ready(function() {
   writeMessage();
   messageLength = ($('.item').length - $('.space').length); //length of message, minus the spaces
   runCycle();
-  $('.target').on('click', '.letter', revealLetter);
+  $('.target').on('click', '.letter, .image', revealLetter);
 });

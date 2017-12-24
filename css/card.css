@@ -698,4 +698,7 @@ div.centered {
   transform: scale(-1, 1);
   display: none; }
 
+.em {
+  font-style: italic; }
+
 /*# sourceMappingURL=card.css.map */
