@@ -145,7 +145,6 @@ div.centered {
 
 #feedback {
   color: #283;
-  width: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -159,7 +158,6 @@ div.centered {
 
 #feedback div {
   position: absolute;
-  width: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -648,13 +646,27 @@ div.centered {
   vertical-align: bottom;
   text-align: left; }
 
-#progress {
-  margin-top: .2em;
-  background-color: #ccc; }
+#lives {
+  margin-top: .2em; }
 
-#remaining {
-  width: 70%;
-  background-color: #283; }
+.life {
+  display: inline-block;
+  position: relative;
+  overflow: visible;
+  width: auto;
+  height: auto; }
+
+.life img {
+  width: 1em; }
+
+.lost img {
+  opacity: .5; }
+
+.lost::after {
+  content: "\00274C";
+  position: absolute;
+  z-index: 2;
+  top: 0; }
 
 .item {
   margin-right: .1em;

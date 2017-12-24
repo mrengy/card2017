@@ -248,13 +248,11 @@ div.centered{
 
 #feedback{
   color: $color-active;
-  width: auto;
   @include both-align;
 }
 
 #feedback div{
   position: absolute;
-  width: auto;
   @include both-align;
   opacity: 0;
 }
@@ -361,14 +359,31 @@ div.centered{
   text-align: left;
 }
 
-#progress{
+#lives{
   margin-top: .2em;
-  background-color: $color-background;
 }
 
-#remaining{
-  width:70%;
-  background-color: $color-active;
+.life{
+  display: inline-block;
+  position: relative;
+  overflow: visible;
+  width: auto;
+  height: auto;
+}
+
+.life img{
+  width: 1em;
+}
+
+.lost img{
+  opacity: .5;
+}
+
+.lost::after{
+  content: "\00274C";
+  position: absolute;
+  z-index: 2;
+  top:0;
 }
 
 .item{
