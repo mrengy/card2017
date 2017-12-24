@@ -222,7 +222,13 @@ div.centered {
     font-size: 154px; } }
 .target a {
   text-decoration: none;
-  color: #333; }
+  color: #333;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; }
 
 .top img, .bottom img {
   max-width: 25%; }
