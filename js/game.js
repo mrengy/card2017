@@ -6,7 +6,7 @@ $( document ).ready(function() {
   var objectsLength;
   var pauseLength = 2000;
   var placeObject = new Array();
-  var messageLength = ($('.item').length - $('.space').length); //length of message, minus the spaces
+  var messageLength;
 
   function revealLetter(){
     var thistxt = $(this).text();
@@ -23,6 +23,12 @@ $( document ).ready(function() {
       });
       //show the letter clicked
       $('.item-letter:contains('+thistxt+')').parent().addClass('completed');
+
+      //when all characters in the message have been completed
+      if ( messageLength == $('.completed').length ){
+        //redirect to end screen once all letters have been clicked
+        $(location).attr('href', 'end.html');
+      }
     } else {
       //show the error animation since this item has been clicked already or is not in the messaage
       $('#error').addClass('active');
@@ -34,11 +40,7 @@ $( document ).ready(function() {
       });
     }
 
-    //when all characters in the message have been completed
-    if ( messageLength == $('.completed').length ){
-      //redirect to end screen once all letters have been clicked
-      $(location).attr('href', 'end.html');
-    }
+
   }
 
   //add the 'out' class to start the out animation after waiting pauseLength
@@ -177,6 +179,7 @@ $( document ).ready(function() {
   objects.push(new Object('image','us'));
 
   writeMessage();
+  messageLength = ($('.item').length - $('.space').length); //length of message, minus the spaces
   runCycle();
   $('.target').on('click', '.letter', revealLetter);
 });
