@@ -102,7 +102,7 @@ body {
   display: block;
   position: relative;
   box-sizing: border-box;
-  padding: 1.5rem 1rem 1rem 1rem;
+  padding: 1rem;
   overflow: auto;
   height: 100%;
   text-align: center;
@@ -292,7 +292,6 @@ div.centered{
 /* nudge text up to be in the same place as an image, despite room on top of the letter in the font */
 .top span{
   display: block;
-  margin-top: -.23em;
 }
 
 .left img, .right img{
