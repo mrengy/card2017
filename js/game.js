@@ -7,15 +7,18 @@ $( document ).ready(function() {
   var pauseLength = 2000;
   var placeObject = new Array();
   var messageLength;
+  var soundSuccess = new Audio("sound/success.wav");
+  var soundError = new Audio("sound/error.wav");
 
   function revealLetter(){
     var thistxt = $(this).text();
     var thisClass= $(this)[0].className;
 
     //feedback animation
-    //if the item is a letter and doesn't have the completed class, i.e. it hasn't been clicked already, show the success animation
+    //if the item is a letter and doesn't have the completed class, i.e. it hasn't been clicked already, show the success feedback
     if( thisClass == 'letter' && !$('.item-letter:contains('+thistxt+')').parent().hasClass('completed') ){
       $('#success').addClass('active');
+      soundSuccess.play();
       $('#feedback div').on('webkitAnimationEnd oanimationend msAnimationEnd animationend',function(e){
         //remove the class when animation is done
         if(e.originalEvent.animationName==='activeOut'){
@@ -25,14 +28,19 @@ $( document ).ready(function() {
       //show the letter clicked
       $('.item-letter:contains('+thistxt+')').parent().addClass('completed');
 
-      //when all characters in the message have been completed
-      if ( messageLength == $('.completed').length ){
-        //redirect to end screen once all letters have been clicked
-        $(location).attr('href', 'end.html');
-      }
+      //wait for success sound to finish
+      soundSuccess.addEventListener("ended", function(){
+        //when all characters in the message have been completed
+        if ( messageLength == $('.completed').length ){
+          //redirect to end screen once all letters have been clicked
+          $(location).attr('href', 'end.html');
+        }
+      });
+
     } else {
-      //show the error animation since this item has been clicked already or is not in the messaage
+      //show the error feedback since this item has been clicked already or is not in the messaage
       $('#error').addClass('active');
+      soundError.play();
       $('#feedback div').on('webkitAnimationEnd oanimationend msAnimationEnd animationend',function(e){
         //remove the class when animation is done
         if(e.originalEvent.animationName==='activeOut'){
