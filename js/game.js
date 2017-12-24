@@ -60,8 +60,8 @@ $( document ).ready(function() {
         }
       });
     }
-
-
+    //don't follow the link
+    return false;
   }
 
   //add the 'out' class to start the out animation after waiting pauseLength
