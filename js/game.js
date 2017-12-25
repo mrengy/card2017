@@ -203,4 +203,28 @@ $( document ).ready(function() {
   messageLength = ($('.item').length - $('.space').length); //length of message, minus the spaces
   runCycle();
   $('.target').on('click', 'a', revealLetter);
+
+  /* preload resources for next page https://perishablepress.com/3-ways-preload-images-css-javascript-ajax/ */
+  setTimeout(function() {
+    // get parent url
+    var url = window.location.href;
+    var parentUrl = url.substring( 0, url.lastIndexOf( "/" ) + 1);
+    /*
+    //load other things
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', parentUrl+'');
+		xhr.send('');
+		xhr = new XMLHttpRequest();
+		xhr.open('GET', 'http://domain.tld/preload.css');
+		xhr.send('');
+    */
+		// preload images
+		new Image().src = parentUrl+"img/kepler.png";
+		new Image().src = parentUrl+"img/lightning.png";
+		new Image().src = parentUrl+"img/us.png";
+		new Image().src = parentUrl+"img/tomato.png";
+		new Image().src = parentUrl+"img/us-tree-large.jpg";
+    new Image().src = parentUrl+"img/us-tree-medium.jpg";
+    new Image().src = parentUrl+"img/us-tree-small.jpg";
+	}, 1000);
 });
