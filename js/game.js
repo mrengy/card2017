@@ -7,8 +7,8 @@ $( document ).ready(function() {
   var pauseLength = 2000;
   var placeObject = new Array();
   var messageLength;
-  var soundSuccess = new Audio("sound/success.wav");
-  var soundError = new Audio("sound/error.wav");
+  var soundSuccess = new Audio("sound/success.mp3");
+  var soundError = new Audio("sound/error.mp3");
   var lives = $('.life').length;
 
   function revealLetter(){
@@ -209,15 +209,14 @@ $( document ).ready(function() {
     // get parent url
     var url = window.location.href;
     var parentUrl = url.substring( 0, url.lastIndexOf( "/" ) + 1);
-    /*
-    //load other things
+
+    // preload non-images
 		var xhr = new XMLHttpRequest();
-		xhr.open('GET', parentUrl+'');
+		xhr.open('GET', parentUrl+'sound/success.mp3');
 		xhr.send('');
-		xhr = new XMLHttpRequest();
-		xhr.open('GET', 'http://domain.tld/preload.css');
+    var xhr = new XMLHttpRequest();
+		xhr.open('GET', parentUrl+'sound/error.mp3');
 		xhr.send('');
-    */
 		// preload images
 		new Image().src = parentUrl+"img/kepler.png";
 		new Image().src = parentUrl+"img/lightning.png";
