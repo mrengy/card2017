@@ -12,7 +12,7 @@ $( document ).ready(function() {
   var lives = $('.life').length;
 
   function revealLetter(){
-    var thisText = $(this)[0].children[0].outerText;
+    var thisText = $(this)[0].children[0].textContent;
     var thisClass= $(this)[0].children[0].className;
     //feedback animation
     //if the item is a letter and doesn't have the completed class, i.e. it hasn't been clicked already, show the success feedback
@@ -25,6 +25,7 @@ $( document ).ready(function() {
           $(e.target).removeClass('active');
         }
       });
+
       //show the letter clicked
       $('.item-letter:contains('+thisText+')').parent().addClass('completed');
 
